@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注意事项</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffdd00, #ff7f50);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 500px;
+            text-align: center;
+        }
+        a {
+            color: #007aff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            margin-top: 20px;
+            background: #007aff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>重要提示</h2>
+        <p>为了确保应用正常工作，请访问以下链接并按下 <strong>“灰色按钮”</strong> 按钮：</p>
+        <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">https://cors-anywhere.herokuapp.com/corsdemo</a>
+        <p>完成后，请返回本页面并点击确定以继续。</p>
+        <button onclick="confirmAccess()">确定</button>
+    </div>
+
+    <script>
+        function confirmAccess() {
+            alert("感谢您的配合！您现在可以返回主页面继续使用应用。");
+            window.history.back(); // 返回上一页
+        }
+    </script>
+</body>
+</html>
